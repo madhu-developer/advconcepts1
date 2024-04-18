@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*async function postData(){
+          let res = await fetch(
+            "http://localhost:3000/products",{
+                method:"POST",
+                body:JSON.stringify({
+                    "id":4,
+                    "name":"Air Pods",
+                    "price":"15000"
+                }),
+                headers:{
+                    "Content-Type":"application/json"
+                }
+            }
+            )
+            let data = await res.json()
+            console.log(data)
+        }
+        async function getData(){
+            let res = await fetch(
+            "http://localhost:3000/products")
+            let data = await res.json();
+            console.log(data)
+        }*/
+        async function putData(){
+          let res = await fetch(
+            "http://localhost:3000/products/4",{
+                method:"PUT",
+                body:JSON.stringify(
+                    {
+                    "name":"AirPods",
+                    "price":"20000"
+                }
+            ),
+                headers:{
+                    "Content-Type":"application/json"
+                }
+            }
+            )
+            let data = await res.json()
+            console.log(data)
+        }
+    </script>
+   <!-- <button onClick="postData()">POST</button> -->
+    <button onClick="getData()">GET</button>
+    <button oncClick="putData()">PUT</button>
+</body>
+</html>
